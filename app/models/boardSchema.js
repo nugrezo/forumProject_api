@@ -14,7 +14,7 @@ const boardSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-  post: {
+  description: {
     type: String,
     required: false
   }
@@ -22,6 +22,6 @@ const boardSchema = new mongoose.Schema({
   timestamps: true
 })
 
-const BoardRoute = mongoose.model('BoardRoute', boardSchema)
+const UserBoard = mongoose.model('UserBoard', boardSchema)
 
-module.exports = BoardRoute
+module.exports = UserBoard
