@@ -75,13 +75,13 @@ router.get('/userBoards/:id', requireToken, (req, res, next) => {
     .catch(next)
 })
 
+// Update router
 router.patch('/userBoards/:id', requireToken, removeBlanks, (req, res, next) => {
   UserBoard.findById(req.params.id)
     .then(handle404)
     .then(userBoard => {
       requireOwnership(req, userBoard)
-      return UserBoard.findByIdAndUpdate({ '_id': req.params.id },
-        { $set: req.body.userBoard }, { new: true })
+      return userBoard.updateOne(req.body.userBoard)
     })
     .then(userBoard => res.json({ userBoard }))
     .catch(next)
