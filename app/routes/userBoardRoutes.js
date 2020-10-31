@@ -83,7 +83,8 @@ router.patch('/userBoards/:id', requireToken, removeBlanks, (req, res, next) => 
       requireOwnership(req, userBoard)
       return UserBoard.updateOne(req.body.userBoard)
     })
-    .then(userBoard => res.json({ userBoard }))
+    .then(userBoard => res.status(200).json({ userBoard }))
+    // .then(userBoard => res.json({ userBoard }))
     .catch(next)
 })
 
