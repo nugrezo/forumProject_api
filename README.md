@@ -43,20 +43,20 @@ I created 5 routes for userBoard
 
 ## API END POINTS
 
-Verb	URI Pattern	Controller#Action
-POST	/sign-up	users#signup
-POST	/sign-in	users#signin
-DELETE	/sign-out	users#signout
-PATCH	/change-password	users#changepw
-GET	/userImages	userImages#index
-GET*	/userImages/orderdByDateDesc	userImages#index
-POST	/userImages	userImages#create
-POST*	/userImages/Image	userImages#image upload
-GET	/userImages/:id	userImages#show an image
-PATCH	/userImages/:id	userImages#update metadata
-GET* - This will be a query parameter in the next version.
-POST* - This will be a query parameter in the next version.
-All data returned from API actions is formatted as JSON.
+- Verb	URI Pattern	Controller#Action
+- POST	/sign-up	users#signup
+- POST	/sign-in	users#signin
+- DELETE	/sign-out	users#signout
+- PATCH	/change-password	users#changepw
+- GET	/userBoards	userBoards#index
+- GET*	/userBoards/orderdByDateDesc
+- POST	/userBoards	userBoards#create
+- POST*	/userBoards/board	userBoards#board upload
+- GET	/userBoards/:id	userBoards#show a board
+- PATCH	/userBoards/:id	userBoards#update
+- GET* - This will be a query parameter in the next version.
+- POST* - This will be a query parameter in the next version.
+- All data returned from API actions is formatted as JSON.
 
 ## User Stories
 
@@ -85,10 +85,14 @@ All data returned from API actions is formatted as JSON.
 
 ## Important Links
 
-Deployed Frontend
-Deployed Backend
-Frontend Github Repository
-Backend Github Repository
+1. Deployed Frontend
+    https://nugrezo.github.io/forumProject_client/
+2. Deployed Backend
+    https://hidden-gorge-21669.herokuapp.com
+3. Frontend Github Repository
+    https://github.com/nugrezo/forumProject_client
+4. Backend Github Repository
+    https://github.com/nugrezo/forumProject_api
 
 ## Unsolved Problems/Reach Goals
 
